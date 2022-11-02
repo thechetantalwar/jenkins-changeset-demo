@@ -8,7 +8,7 @@ pipeline {
                 }
                 steps {
                     dir('app1') {
-                        sh "app1 processed" > log.txt
+                        sh 'echo app1 > log.txt'
                     }
                 }
         }
@@ -18,7 +18,7 @@ pipeline {
                 }
                 steps {
                     dir('app2') {
-                        sh "app2 processed" > log.txt
+                        sh 'echo app2 > log.txt'
                     }
                 }
         }
@@ -28,7 +28,7 @@ pipeline {
                 }
                 steps {
                     dir('app3') {
-                        sh "app3 processed" > log.txt
+                        sh 'echo app3 > log.txt'
                     }
                 }
         }
