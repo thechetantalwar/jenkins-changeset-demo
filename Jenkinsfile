@@ -3,7 +3,6 @@ pipeline {
 
     stages {
         stage('app1 Build') {
-            steps {
                 when {
                     changeset "**/app1/*.*"
                 }
@@ -12,10 +11,8 @@ pipeline {
                         sh "app1 processed" > log.txt
                     }
                 }
-            }
         }
         stage('app2 Build') {
-            steps {
                 when {
                     changeset "**/app2/*.*"
                 }
@@ -24,10 +21,8 @@ pipeline {
                         sh "app2 processed" > log.txt
                     }
                 }
-            }
         }
         stage('app3 Build') {
-            steps {
                 when {
                     changeset "**/app3/*.*"
                 }
@@ -36,7 +31,6 @@ pipeline {
                         sh "app3 processed" > log.txt
                     }
                 }
-            }
         }
     }
     
