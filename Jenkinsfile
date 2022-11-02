@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Git Checkout') {
-            steps {
-                git branch: 'main', changelog: false, credentialsId: 'azure', poll: false, url: 'https://chetantalwar0584@dev.azure.com/chetantalwar0584/DemoProject2/_git/DemoProject2'
-            }
-        }
         stage('app1 Build') {
             steps {
                 when {
